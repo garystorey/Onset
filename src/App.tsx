@@ -35,7 +35,7 @@ function App() {
         posts.length > 0 &&
         posts.map((post, inx) => (
           <div
-            style={{ animationDelay: `${inx * 0.5}s` }}
+            style={{ animationDelay: `${inx * 0.05}s` }}
             className="post"
             key={post.id}
           >
