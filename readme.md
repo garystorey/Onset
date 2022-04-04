@@ -1,14 +1,13 @@
 # Tools
 
 - Vite
-- React
 - TypeScript
+- React
 - Eslint
 - Prettier
-- Testing Library/Cypress
 - Vitest
-- OpenProps
+- Testing Library
+- Open Props
 - PostCSS
-- VanillaExtract
 - Prisma
 - Zod

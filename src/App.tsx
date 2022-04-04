@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import fetch from "cross-fetch";
 import "./App.css";
+import fetch from "cross-fetch";
+import { useEffect, useState } from "react";
 
 interface Post {
   userId: number;
@@ -19,6 +19,7 @@ function App() {
       .then((posts) => {
         setPosts(posts as Post[]);
         setIsLoading(false);
+        console.log(posts);
       });
   };
 
@@ -33,11 +34,18 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       {isLoading && <span aria-label="loading">Loading...</span>}
-      <ul>
-        {posts &&
-          posts.length > 0 &&
-          posts.map((post) => <li key={post.id}>{post.title ?? ""}</li>)}
-      </ul>
+      {posts &&
+        posts.length > 0 &&
+        posts.map((post, inx) => (
+          <div
+            style={{ animationDelay: `${inx * 0.5}s` }}
+            className="post"
+            key={post.id}
+          >
+            <strong>{post.title}</strong>
+            <p>{post.body}</p>
+          </div>
+        ))}
     </div>
   );
 }

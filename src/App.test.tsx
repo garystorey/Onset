@@ -1,11 +1,11 @@
-import { expect, it, describe } from "vitest";
+import App from "./App";
+import { posts } from "./mocks/handlers";
 import {
   render,
   screen,
   waitForElementToBeRemoved,
 } from "@testing-library/react";
-import { posts } from "./mocks/handlers";
-import App from "./App";
+import { expect, it, describe } from "vitest";
 
 describe("App", () => {
   it("should render snapshot", async () => {
@@ -22,7 +22,6 @@ describe("App", () => {
         >
           Loading...
         </span>
-        <ul />
       </div>
     `);
     const hello = screen.getByRole("heading", { name: "Hello" });

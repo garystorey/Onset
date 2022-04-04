@@ -15,3 +15,14 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+li {
+  opacity: 0;
+}
+.post {
+  max-width: 23%;
+  animation: var(--animation-slide-in-right), var(--animation-fade-in) forwards;
+}
+.post img {
+  object-fit: cover;
+  aspect-ratio: 16 /9;
+}
