@@ -24,10 +24,7 @@ function App() {
   };
 
   useEffect(() => {
-    const to = setTimeout(() => {
-      fetchPosts();
-      return () => clearTimeout(to);
-    }, 1000);
+    fetchPosts();
   }, []);
 
   return (
