@@ -1,6 +1,10 @@
-# Tools
+# Onset 
 
-- Vite
+Am opinionated React starter template
+
+Onset uses the following tech stack:
+
+- Vite 
 - TypeScript
 - React
 - Eslint
@@ -8,6 +12,6 @@
 - Vitest
 - Testing Library
 - Open Props
-- PostCSS
 - Prisma
-- Zod
+- Zod / Zod-prisma
+- PostCSS
