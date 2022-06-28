@@ -19,7 +19,6 @@ function App() {
       .then((posts) => {
         setPosts(posts as Post[]);
         setIsLoading(false);
-        console.log(posts);
       });
   };
 
@@ -29,16 +28,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1>Onset</h1>
       {isLoading && <span aria-label="loading">Loading...</span>}
       {posts &&
         posts.length > 0 &&
-        posts.map((post, inx) => (
-          <div
-            style={{ animationDelay: `${inx * 0.05}s` }}
-            className="post"
-            key={post.id}
-          >
+        posts.map((post) => (
+          <div className="post" key={post.id}>
             <strong>{post.title}</strong>
             <p>{post.body}</p>
           </div>

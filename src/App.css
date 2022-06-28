@@ -18,9 +18,9 @@ ul {
 li {
   opacity: 0;
 }
-.post {
+/* .post {
   animation: var(--animation-slide-in-right), var(--animation-fade-in) forwards;
-}
+} */
 .post img {
   object-fit: cover;
   aspect-ratio: 16 /9;
