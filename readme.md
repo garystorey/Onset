@@ -1,6 +1,6 @@
 # Onset 
 
-Am opinionated React starter template
+An opinionated React starter template.
 
 Onset uses the following tech stack:
 
