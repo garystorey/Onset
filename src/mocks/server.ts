@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import { handlers } from "./handlers";
 import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll } from "vitest";

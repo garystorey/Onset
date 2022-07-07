@@ -1,7 +1,16 @@
 import "./onset.css";
-import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
 
 function Onset() {
+  const { isLoading, error, data } = useQuery("repo", () =>
+    fetch("https://api.github.com/repos/garystorey/Onset").then((res) =>
+      res.json()
+    )
+  );
+
+  if (isLoading) return <>Loading..</>;
+  if (error instanceof Error) <>An error has occurred: {error.message}</>;
+
   return (
     <>
       <section className="onset">
@@ -14,14 +23,16 @@ function Onset() {
           <strong>noun</strong>
         </header>
         <main>
-          <p>the beginning of something, especially something unpleasant.</p>
           <p>
-            <Link to="/posts">example posts page</Link>
+            {data.description
+              ? data.description
+              : `The beginning of something, especially something unpleasant.`}
           </p>
         </main>
       </section>
       <footer>
-        Made with <strong>❤</strong>
+        👀 {data.subscribers_count} ✨ {data.stargazers_count}
+        <br /> Made with <strong>❤</strong>
         <span className="hidden">love</span>
       </footer>
       <a
