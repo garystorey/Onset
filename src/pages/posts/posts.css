@@ -1,0 +1,17 @@
+  .post {
+    color: var(--black);
+  }
+
+  h1 {
+    color: var(--primary);
+  }
+
+  p {
+    color: var(--neutral-4);
+    font-size: var(--font-size-3)
+  }
+  .post img {
+    object-fit: cover;
+    aspect-ratio: 16 /9;
+  }
+  

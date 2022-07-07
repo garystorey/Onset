@@ -1,27 +1,37 @@
+:root {
+  --primary: var(--grape-7);
+  --secondary: var(--teal-1);
+  --white:var(--gray-1);
+  --neutral-1: var(--gray-2);
+  --neutral-2:var(--gray-3);
+  --neutral-3: var(--gray-4);
+  --neutral-4: var(--gray-6);
+  --neutral-5: var(--gray-7);
+  --black: var(--gray-9);
+}
+
 body {
-  background-color: var(--gray-9);
   color: var(--gray-2);
   font-size: var(--font-size-1);
   line-height: var(--font-lineheight-3);
+  background-color: var(--secondary);
+  font-family: var(--font-serif);
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a:active, a:link,a:visited {
+  color: var(--primary)
+}
 .App {
   width: 70ch;
   margin: var(--size-8) auto;
   padding: var(--size-2);
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-li {
-  opacity: 0;
-}
-/* .post {
-  animation: var(--animation-slide-in-right), var(--animation-fade-in) forwards;
-} */
-.post img {
-  object-fit: cover;
-  aspect-ratio: 16 /9;
 }

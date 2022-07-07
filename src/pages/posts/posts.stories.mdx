@@ -1,0 +1,19 @@
+import Posts from "./posts";
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { BrowserRouter } from "react-router-dom";
+
+export const Template = () => (
+  <BrowserRouter>
+    <Posts />
+  </BrowserRouter>
+);
+
+<Meta title="Pages/Posts" />
+
+# Pages
+
+This page calls an API and renders the resulting data.
+
+<Canvas>
+  <Story name="Posts">{Template.bind({})}</Story>
+</Canvas>

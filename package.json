@@ -18,7 +18,8 @@
     "postcss-jit-props": "^1.0.7",
     "postcss-preset-env": "^7.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -52,6 +53,12 @@
     "vitest": "^0.16.0"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "src/**/*.{ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ],
+    "*.{json,md,mdx}": [
+      "prettier --write"
+    ]
   }
 }
