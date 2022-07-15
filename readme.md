@@ -15,5 +15,5 @@ Onset uses the following tech stack:
 - Testing Library
 - Open Props
 - Prisma
-- Zod / Zod-prisma
+- Zod
 - PostCSS
