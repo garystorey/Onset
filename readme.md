@@ -13,7 +13,8 @@ Onset uses the following tech stack:
 - Prettier
 - Vitest
 - Testing Library
+- MSW
 - Open Props
+- PostCSS
 - Prisma
 - Zod
-- PostCSS
