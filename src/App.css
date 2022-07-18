@@ -12,7 +12,7 @@
 
 body {
   color: var(--gray-2);
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-3);
   line-height: var(--font-lineheight-3);
   background-color: var(--secondary);
   font-family: var(--font-serif);
@@ -30,6 +30,7 @@ html {
 a:active, a:link,a:visited {
   color: var(--primary)
 }
+
 .App {
   width: 70ch;
   margin: var(--size-8) auto;

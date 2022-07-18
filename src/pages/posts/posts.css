@@ -1,5 +1,8 @@
   .post {
     color: var(--black);
+    padding: var(--size-3);
+    box-shadow: var(--shadow-1);
+    margin: var(--size-5) 0;
   }
 
   h1 {

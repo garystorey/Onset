@@ -1,11 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
 import "open-props/style";
+import { StrictMode } from "react";
+import { render } from "react-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const queryClient = new QueryClient();
+
+render(
+  <StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </StrictMode>,
   document.getElementById("root")
 );

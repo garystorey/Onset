@@ -16,7 +16,9 @@ function Onset() {
         <main>
           <p>the beginning of something, especially something unpleasant.</p>
           <p>
-            <Link to="/posts">example posts page</Link>
+            <Link to="/posts" className="link">
+              View example page
+            </Link>
           </p>
         </main>
       </section>

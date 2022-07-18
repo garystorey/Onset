@@ -1,46 +1,41 @@
 import { Post } from "../../types";
 import "./posts.css";
 import fetch from "cross-fetch";
-import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 
 function Posts() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const {
+    isLoading,
+    error,
+    data: posts,
+  } = useQuery(["POSTS"], () =>
+    fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
+      res.json()
+    )
+  );
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      await fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((res) => res.json())
-        .then((posts) => {
-          setPosts(posts as Post[]);
-          setIsLoading(false);
-        });
-    };
-    fetchPosts();
-  }, []);
+  if (isLoading) return "Loading...";
+  if (error instanceof Error) return "An error has occurred: " + error.message;
 
   return (
     <div className="App">
       <h1>Onset</h1>
       <p>
         This page loads example post data from{" "}
-        <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a>.
-        During tests, this api call is mocked my msw.
+        <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a> and
+        is cached by react-query. During tests, this api call is mocked my MSW.
       </p>
       <p>
         <Link to="/">Back to main</Link>
       </p>
       <hr />
-      {isLoading && <span aria-label="loading">Loading...</span>}
-      {posts &&
-        posts.length > 0 &&
-        posts.map((post) => (
-          <div className="post" key={post.id}>
-            <strong>{post.title}</strong>
-            <p>{post.body}</p>
-          </div>
-        ))}
+      {posts.map((post: Post) => (
+        <div className="post" key={post.id}>
+          <strong>{post.title}</strong>
+          <p>{post.body}</p>
+        </div>
+      ))}
     </div>
   );
 }
