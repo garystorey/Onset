@@ -15,8 +15,8 @@ function Posts() {
     )
   );
 
-  if (isLoading) return "Loading...";
-  if (error instanceof Error) return "An error has occurred: " + error.message;
+  if (isLoading) return <>Loading...</>;
+  if (error instanceof Error) return <>An error has occurred {error.message}</>;
 
   return (
     <div className="App">
