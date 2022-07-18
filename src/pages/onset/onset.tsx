@@ -1,5 +1,5 @@
-import "./onset.css";
-import { Link } from "react-router-dom";
+import "./onset.css"
+import { Link } from "react-router-dom"
 
 function Onset() {
   return (
@@ -14,6 +14,7 @@ function Onset() {
           <strong>noun</strong>
         </header>
         <main>
+          <p>the beginning of something, especially something unpleasant.</p>
           <p>
             <Link to="/posts" className="link">
               View example page
@@ -52,6 +53,6 @@ function Onset() {
         </svg>
       </a>
     </>
-  );
+  )
 }
-export default Onset;
+export default Onset
