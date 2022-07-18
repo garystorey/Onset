@@ -11,15 +11,6 @@
     "test": "vitest",
     "test:ui": "vitest --ui"
   },
-  "dependencies": {
-    "open-props": "^1.4.1",
-    "postcss-jit-props": "^1.0.7",
-    "postcss-preset-env": "^7.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-query": "^3.39.2",
-    "react-router-dom": "^6.3.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.18.6",
     "@testing-library/react": "^12.1.3",
@@ -41,7 +32,14 @@
     "jsdom": "^20.0.0",
     "lint-staged": "^13.0.3",
     "msw": "^0.43.1",
-    "prettier": "2.7.1",
+    "open-props": "^1.4.1",
+    "postcss-jit-props": "^1.0.7",
+    "postcss-preset-env": "^7.7.2",
+    "prettier": "^2.7.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.39.2",
+    "react-router-dom": "^6.3.0",
     "typescript": "^4.7.4",
     "vite": "^2.9.13",
     "vitest": "^0.17.1"
@@ -54,5 +52,14 @@
     "*.{json,md,mdx}": [
       "prettier --write"
     ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": false
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
   }
 }
