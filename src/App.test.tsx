@@ -1,30 +1,30 @@
-import App from "./App";
-import { posts } from "./mocks/handlers";
-import { render, screen, waitFor } from "@testing-library/react";
-import { QueryClientProvider, QueryClient } from "react-query";
-import { expect, it, describe } from "vitest";
+import App from "./App"
+import { posts } from "./mocks/handlers"
+import { render, screen, waitFor } from "@testing-library/react"
+import { QueryClientProvider, QueryClient } from "react-query"
+import { expect, it, describe } from "vitest"
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 /*eslint-disable-next-line */
-const noop = () => {};
+const noop = () => {}
 
 const renderApp = () => {
   const utils = render(
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
-  );
+  )
 
-  const snapshot = utils.container.firstChild;
+  const snapshot = utils.container.firstChild
   return {
     ...utils,
     snapshot,
-  };
-};
+  }
+}
 
 describe("App", () => {
   it("should render snapshot", async () => {
-    const { snapshot } = renderApp();
+    const { snapshot } = renderApp()
     expect(snapshot).toMatchInlineSnapshot(`
       <div
         class="App"
@@ -106,6 +106,6 @@ describe("App", () => {
           </svg>
         </a>
       </div>
-    `);
-  });
-});
+    `)
+  })
+})

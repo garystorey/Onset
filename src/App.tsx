@@ -1,7 +1,7 @@
-import "./App.css";
-import { Onset } from "./pages";
-import Posts from "./pages/posts/posts";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css"
+import { Onset } from "./pages"
+import Posts from "./pages/posts/posts"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

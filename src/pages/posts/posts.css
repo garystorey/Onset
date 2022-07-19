@@ -1,20 +1,19 @@
-  .post {
-    color: var(--black);
-    padding: var(--size-3);
-    box-shadow: var(--shadow-1);
-    margin: var(--size-5) 0;
-  }
+.post {
+  color: var(--black);
+  padding: var(--size-3);
+  box-shadow: var(--shadow-1);
+  margin: var(--size-5) 0;
+}
 
-  h1 {
-    color: var(--primary);
-  }
+h1 {
+  color: var(--primary);
+}
 
-  p {
-    color: var(--neutral-4);
-    font-size: var(--font-size-3)
-  }
-  .post img {
-    object-fit: cover;
-    aspect-ratio: 16 /9;
-  }
-  
+p {
+  color: var(--neutral-4);
+  font-size: var(--font-size-3);
+}
+.post img {
+  object-fit: cover;
+  aspect-ratio: 16 /9;
+}

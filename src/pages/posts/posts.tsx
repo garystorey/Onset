@@ -1,8 +1,8 @@
-import { Post } from "../../types";
-import "./posts.css";
-import fetch from "cross-fetch";
-import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
+import { Post } from "../../types"
+import "./posts.css"
+import fetch from "cross-fetch"
+import { useQuery } from "react-query"
+import { Link } from "react-router-dom"
 
 function Posts() {
   const {
@@ -13,10 +13,10 @@ function Posts() {
     fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
       res.json()
     )
-  );
+  )
 
-  if (isLoading) return <>Loading...</>;
-  if (error instanceof Error) return <>An error has occurred {error.message}</>;
+  if (isLoading) return <>Loading...</>
+  if (error instanceof Error) return <>An error has occurred {error.message}</>
 
   return (
     <div className="App">
@@ -37,7 +37,7 @@ function Posts() {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-export default Posts;
+export default Posts

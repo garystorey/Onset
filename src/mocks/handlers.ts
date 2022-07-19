@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { rest } from "msw";
+import { rest } from "msw"
 
 export const repo = {
   id: 1234567,
@@ -25,7 +25,7 @@ export const repo = {
   open_issues: 0,
   watchers: 0,
   subscribers_count: 1,
-};
+}
 
 export const posts = [
   {
@@ -89,7 +89,7 @@ export const posts = [
     title: "optio molestias id quia eum",
     body: "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error",
   },
-];
+]
 
 export const handlers = [
   rest.get("https://api.github.com/repos/garystorey/Onset", (req, res, ctx) =>
@@ -98,4 +98,4 @@ export const handlers = [
   rest.get("https://jsonplaceholder.typicode.com/posts", (req, res, ctx) =>
     res(ctx.status(200), ctx.json(posts))
   ),
-];
+]

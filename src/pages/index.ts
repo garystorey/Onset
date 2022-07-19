@@ -1,1 +1,1 @@
-export * from "./onset";
+export * from "./onset"
