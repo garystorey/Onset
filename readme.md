@@ -18,5 +18,4 @@ Onset uses the following tech stack:
 - PostCSS
 - React Query
 - React Router
-- Prisma
 - Zod
