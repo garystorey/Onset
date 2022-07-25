@@ -10,7 +10,7 @@ h1 {
 }
 
 p {
-  color: var(--neutral-4);
+  color: var(--gray-7);
   font-size: var(--font-size-3);
 }
 .post img {

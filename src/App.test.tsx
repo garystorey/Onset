@@ -26,7 +26,7 @@ describe("App", () => {
   it("should render snapshot", async () => {
     const { snapshot } = renderApp()
     expect(snapshot).toMatchInlineSnapshot(`
-      <div
+      <main
         class="App"
       >
         <section
@@ -55,6 +55,9 @@ describe("App", () => {
             </strong>
           </header>
           <main>
+            <p>
+              the beginning of something, especially something unpleasant.
+            </p>
             <p>
               <a
                 class="link"
@@ -105,7 +108,7 @@ describe("App", () => {
             />
           </svg>
         </a>
-      </div>
+      </main>
     `)
   })
 })

@@ -31,6 +31,7 @@ a:active,
 a:link,
 a:visited {
   color: var(--primary);
+  font-weight: bolder;
 }
 
 .App {

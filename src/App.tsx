@@ -5,14 +5,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Onset />} />
           <Route path="/posts" element={<Posts />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </main>
   )
 }
 
