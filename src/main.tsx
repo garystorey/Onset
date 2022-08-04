@@ -1,8 +1,8 @@
 import App from "./App"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import "open-props/style"
 import { StrictMode } from "react"
 import { render } from "react-dom"
-import { QueryClient, QueryClientProvider } from "react-query"
 
 const queryClient = new QueryClient()
 

@@ -1,7 +1,7 @@
 import { Post } from "../../types"
 import "./posts.css"
+import { useQuery } from "@tanstack/react-query"
 import fetch from "cross-fetch"
-import { useQuery } from "react-query"
 import { Link } from "react-router-dom"
 
 function Posts() {

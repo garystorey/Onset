@@ -1,7 +1,7 @@
 import { posts } from "../../mocks/handlers"
 import Posts from "./posts"
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query"
 import { render, screen, waitFor } from "@testing-library/react"
-import { QueryClientProvider, QueryClient } from "react-query"
 import { BrowserRouter } from "react-router-dom"
 import { expect, it, describe } from "vitest"
 
@@ -28,8 +28,7 @@ const renderPosts = () => {
 describe("App", () => {
   it("should render test posts", async () => {
     renderPosts()
-    await waitFor(noop)
-    const onset = screen.getByRole("heading")
+    const onset = await screen.findByRole("heading")
     expect(onset).toBeDefined()
 
     posts.forEach((post) => {
